@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pressure Washing Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #05080f;
+  --card: rgba(255,255,255,0.92);
+  --text: #111827;
+  --muted: #5b6472;
+  --accent: #38bdf8;
+  --accent-2: #0ea5e9;
+  --accent-3: #7dd3fc;
+  --border: rgba(255,255,255,0.25);
+      }
+
+     * { 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  color: var(--text);
+
+  background:
+    radial-gradient(circle at top left, rgba(56,189,248,.30), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(14,165,233,.25), transparent 40%),
+    linear-gradient(135deg,#05080f 0%,#0f172a 45%,#dff6ff 100%);
+
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+      header {
+        background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.35)),
+    linear-gradient(135deg,#0ea5e9,#38bdf8,#7dd3fc);
+
+  color: white;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+      }
+      
+      header::before {
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.22),transparent 18%),
+    radial-gradient(circle at 80% 30%,rgba(255,255,255,.15),transparent 20%),
+    radial-gradient(circle at 60% 80%,rgba(255,255,255,.15),transparent 18%);
+
+    pointer-events:none;
+}
+
+      header h1 { font-size: 2.2rem; margin: 0 0 0.75rem; }
+      header p { margin: 0 auto; max-width: 700px; font-size: 1.05rem; }
+
+      main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+
+      section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 1.25rem;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      }
+
+      h2 { margin-top: 0; color: var(--bg); }
+
+      .grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+      .card {
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem;
+      }
+
+      .service-list {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .service-item {
+        padding: 0.9rem 1rem;
+        border-left: 4px solid var(--accent);
+        background: #f8fafc;
+        border-radius: 8px;
+      }
+
+      .image-row {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .image-box {
+        min-height: 220px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+        border: 1px dashed #93c5fd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-weight: 600;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .contact-list { display: grid; gap: 0.6rem; }
+
+      .logo-title img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,.2));
+}
+
+      footer {
+        text-align: center;
+        padding: 1rem 1rem 2rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 768px) {
+        .grid-2, .grid-3, .image-row { grid-template-columns: 1fr; }
+        header { padding: 3rem 1rem; }
+        header h1 { font-size: 1.8rem; }
+      }
+
+      input,
+select,
+textarea{
+
+width:100%;
+padding:14px;
+
+border-radius:10px;
+
+border:1px solid #d1d5db;
+
+font-size:16px;
+
+margin-top:6px;
+
+margin-bottom:15px;
+
+}
+
+label{
+
+font-weight:700;
+
+display:block;
+
+}
+
+.services{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:10px;
+
+margin:15px 0;
+
+}
+
+.services label{
+
+font-weight:500;
+
+}
+
+.submit-btn{
+
+background:#0ea5e9;
+
+color:white;
+
+font-size:20px;
+
+font-weight:700;
+
+padding:18px;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+width:100%;
+
+transition:.25s;
+
+}
+
+.submit-btn:hover{
+
+background:#0284c7;
+
+transform:translateY(-2px);
+
+box-shadow:0 12px 25px rgba(14,165,233,.35);
+
+}
+
+.before-after-grid{
+    display:grid;
+    gap:2rem;
+    margin-top:1.5rem;
+}
+
+.job{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem;
+}
+
+.photo{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+}
+
+.photo img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+}
+
+.photo span{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:rgba(0,0,0,.75);
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:.9rem;
+    font-weight:700;
+}
+
+@media (max-width:768px){
+    .job{
+        grid-template-columns:1fr;
+    }
+
+    .photo img{
+        height:250px;
+    }
+}
+
+.job {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.photo video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="logo-title">
+    <img src="mylogo.png" alt="Gabe's ProWash Logo">
+  </div>
+      <h1>Gabe's ProWash</h1>
+      <p>Reliable exterior cleaning for homes, driveways, patios, and more. Follow us on social media @gabesprowash, call or text us at (215)-251-2036, or email us at gabesprowash@gmail.com.</p>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>We're a young, growing pressure washing business built on reliability, hard work, and attention to detail. As a 24-year-old business owner, I take pride in every job and treat each property with the care and respect it deserves.</p>
+        <div class="grid grid-2">
+
+  <div class="card">
+    <h3>Why Choose Us?</h3>
+    <p>
+      Let us take care of the dirty work! There’s no need to spend money on expensive pressure-washing equipment or give up your weekends cleaning. We provide the equipment, the hard work, and the results—so you can sit back and enjoy a cleaner property without the hassle.
+      When you choose us, you're supporting a local business that values honest service, clear communication, and lasting customer relationships.</p>
+  </div>
+
+  <div class="card">
+    <h3>What Makes Us Different?</h3>
+    <p>Your property isn't just another job on our schedule. We bring personal attention, high standards, and the determination of a growing business that earns its reputation one customer at a time. Your satisfaction and the quality of our work come first.</p>
+  </div>
+
+</div>
+</section>
+      </section>
+
+      <section id="services">
+        <h2>Services</h2>
+        <div class="service-list">
+          <div class="service-item"><strong>House Washing</strong> — Softwash your home's exterior to look brand new and remove algae.</div>
+          <div class="service-item"><strong>Driveway & Patio Cleaning</strong> — Clean and restore your concrete, brick, or paver surfaces.</div>
+          <div class="service-item"><strong>Trash Bin Cleaning</strong> — Keep your bins fresh and hygienic with our specialized cleaning service.</div>
+          <div class="service-item"><strong>Deck & Fence Cleaning</strong> — Highlight wood restoration and surface care.</div>
+        </div>
+      </section>
+
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Get a Free Quote</h3>
+            <div class="contact-list">
+              <span>Phone: (215)-251-2036</span>
+              <span>Email: gabesprowash@gmail.com</span>
+              <span>Location: Philadelphia, PA, 19134</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Business Hours</h3>
+            <p>Open Monday through Saturday. Appointments can be scheduled starting 9:00 AM and ending at 6:00 PM.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+    <h2>Before & After</h2>
+    <p>See the difference our professional pressure washing services can make.</p>
+
+    <div class="before-after-grid">
+
+        <div class="job">
+            <div class="photo">
+                <a href="before1.jpeg" target="_blank">
+                <img src="before1.jpeg" alt="Before">
+              </a>
+                <span>Before</span>
+            </div>
+
+            <div class="photo">
+               <a href="after1.jpeg" target="_blank">
+                <img src="after1.jpeg" alt="Driveway after cleaning">
+            </a>
+                <span>After</span>
+            </div>
+        </div>
+
+        <div class="job">
+
+    <div class="photo">
+        <a href="before2.jpeg" target="_blank">
+            <img src="before2.jpeg" alt="House before cleaning">
+        </a>
+        <span>Before</span>
+    </div>
+
+    <div class="photo">
+        <video controls>
+            <source src="after2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span>After</span>
+    </div>
+
+<div class="job">
+            <div class="photo">
+                <a href="before3.jpeg" target="_blank">
+                <img src="before3.jpeg" alt="Before">
+              </a>
+                <span>Before</span>
+            </div>
+
+            <div class="photo">
+               <a href="after3.jpeg" target="_blank">
+                <img src="after3.jpeg" alt="Driveway after cleaning">
+            </a>
+                <span>After</span>
+            </div>
+        </div>
+
+</div>
+
+  <div class="job">
+            <div class="photo">
+                <a href="before4.jpeg" target="_blank">
+                <img src="before4.jpeg" alt="Before">
+              </a>
+                <span>Before</span>
+            </div>
+
+            <div class="photo">
+               <a href="after4.jpeg" target="_blank">
+                <img src="after4.jpeg" alt="Driveway after cleaning">
+            </a>
+                <span>After</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="estimator">
+    <h2>Instant Price Estimator</h2>
+
+    <p>
+        Get a quick estimate based on the size of your project. MINIMUM PRICE: $200.00. Final pricing may vary
+        depending on how dirty the surface is, the severity of stains, and the condition
+        of the property.
+    </p>
+
+    <label>Driveway / Sidewalk Square Feet</label>
+    <input type="number" id="driveway" placeholder="Example: 500">
+
+    <label>House Washing Square Feet</label>
+    <input type="number" id="house" placeholder="Example: 1500">
+
+    <label>Fence Square Feet</label>
+    <input type="number" id="fence" placeholder="Example: 300">
+
+    <label>Patio / Paver Square Feet</label>
+    <input type="number" id="patio" placeholder="Example: 400">
+
+    <label>Number of Trash Cans</label>
+    <input type="number" id="trash" placeholder="Example: 3">
+
+    <button class="submit-btn" onclick="calculateEstimate()">
+        Calculate Estimate
+    </button>
+
+    <h3 id="estimateResult"></h3>
+
+
+
+</section>
+<script>
+  function calculateEstimate(){
+
+    let driveway = Number(document.getElementById("driveway").value) || 0;
+    let house = Number(document.getElementById("house").value) || 0;
+    let fence = Number(document.getElementById("fence").value) || 0;
+    let patio = Number(document.getElementById("patio").value) || 0;
+    let trash = Number(document.getElementById("trash").value) || 0;
+
+
+    let total =
+        (driveway * 0.38) +
+        (house * 0.45) +
+        (fence * 0.78) +
+        (patio * 0.43) +
+        (trash * 15);
+
+
+    if(total < 200){
+        total = 200;
+    }
+
+
+    document.getElementById("estimateResult").innerHTML =
+        "Estimated Price: $" + total.toFixed(2) +
+        "<br><small>Final pricing may increase depending on the amount of dirt, stains, buildup, and overall job difficulty. MINIMUM PRICE: $200.00 </small>";
+}
+</script>
+
+  </body>
+</html>
